@@ -1,0 +1,43 @@
+.changeview{
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 768px;
+    height:100vh;
+    background-color: blue;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 15px;
+
+}
+
+.changeview .board{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 300px;
+    background-color: red;
+    padding: 15px;
+    
+}
+
+.changeview .board .card{
+    padding: 15px 25px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    background-color:yellow;
+}
+
+.dropbox{
+    height: 800px;
+    width: 600px;
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+    display: inline-block;
+    border: 2px solid red;
+    flex:1;
+    flex-direction: column;
+    flex-grow: auto;
+}
