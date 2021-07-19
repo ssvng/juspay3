@@ -41,42 +41,33 @@ export default function Sidebar(props) {
     const target = e.target;
 
     e.dataTransfer.setData('card_id',target.id);
-    // ***************************************
-
-    // setTimeout(() => {
-    //     target.style.display = 'none';
-
-    // },0);
-
-    // const card_id = e.dataTransfer.getData('card_id');
-
-    // const card =document.getElementById(card_id);
-    // setEle(card);
-    //target.style.display = 'block';
+   
     
     }
 
-const dragOver = e =>{
-    e.stopPropagation();
-}
+    const dragOver = e =>{
+        e.stopPropagation();
+    }
 
 
-const show = (bool) =>{
-  props.show(bool);
-}
+    const show = (bool) =>{
+      props.show(bool);
+    }
 
 
   
   return (
     <div className="w-60 flex-none h-full overflow-y-auto flex flex-col items-start p-2 border-r border-gray-200">
       <div  className="font-bold"> {"Events"} </div>
-      <div className="flex flex-row flex-wrap bg-yellow-500 text-white px-2 py-1 my-2 text-sm cursor-pointer">
-        {"When "}
+      <div id='10' draggable="true" onDragStart={dragStart}
+            onDragOver={dragOver} className="flex flex-row flex-wrap bg-yellow-500 text-white px-2 py-1 my-2 text-sm cursor-pointer">
+        <button>When
         <Icon name="flag" size={15} className="text-green-600 mx-2" />
-        {}
+        { }</button>
       </div>
-      <div id="1" draggable="true"  className="flex flex-row flex-wrap bg-yellow-500 text-white px-2 py-1 my-2 text-sm cursor-pointer">
-        {"When this sprite clicked"}
+      <div id='11' draggable="true" onDragStart={dragStart}
+            onDragOver={dragOver} className="flex flex-row flex-wrap bg-yellow-500 text-white px-2 py-1 my-2 text-sm cursor-pointer">
+        <button>When this sprite clicked</button>
       </div>
       <div className="font-bold"> {"Motion"} </div>
       
@@ -85,7 +76,7 @@ const show = (bool) =>{
             onDragOver={dragOver} className="flex flex-row flex-wrap bg-blue-500 text-white px-2 py-1 my-2 text-sm cursor-pointer">
         <button id="but1" onClick ={() =>{
           caller()
-          }} >Move    steps</button><input id="text1" type="text" placeholder="10" defaultValue = "10"  style={{width:"20px", color:"black"}}></input>
+          }} >Move steps</button><input id="text1" type="text" placeholder="10" defaultValue = "10"  style={{width:"20px", color:"black"}}></input>
       </div>
       
       
@@ -124,13 +115,13 @@ const show = (bool) =>{
             onDragOver={dragOver} className="flex flex-row flex-wrap bg-red-500 text-white px-2 py-1 my-2 text-sm cursor-pointer">
         
         <Icon name="redo" size={15} className="text-white mx-2" />
-        <button onClick ={() =>{caller()}} >Wait 1 second</button>
+        <button>Wait 1 second</button>
       </div>
       <div id="9" draggable="true" onDragStart={dragStart}
             onDragOver={dragOver} className="flex flex-row flex-wrap bg-red-500 text-white px-2 py-1 my-2 text-sm cursor-pointer">
         
         <Icon name="redo" size={15} className="text-white mx-2" />
-        <button onClick ={() =>{caller()}} >wait until</button>
+        <button>wait until</button>
       </div>
     </div>
     

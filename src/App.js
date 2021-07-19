@@ -13,6 +13,7 @@ export default function App() {
   const[show,setShow]= useState(true);
 
   const [dragId, setDragId] = useState();
+  
  
 
   const handleDrag = (ev) => {
@@ -39,7 +40,7 @@ export default function App() {
           />
           {/* <div className="changeview">
               <Board id="board-1" className="board">
-                <Card id="card-1" draggable="true" AllowDragDropCopy="true" className="card"> <p>card one</p></Card>
+                <Card id="card-1" draggable="true" className="card"> <p>card one</p></Card>
               
                 <Card id="card-2" draggable="true" className="card"> <p>card two</p></Card>
               </Board>
