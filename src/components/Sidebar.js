@@ -74,7 +74,7 @@ export default function Sidebar(props) {
       
       <div id='2' draggable="true" onDragStart={dragStart}
             onDragOver={dragOver} className="flex flex-row flex-wrap bg-blue-500 text-white px-2 py-1 my-2 text-sm cursor-pointer">
-        <button id="but1" onClick ={() =>{
+        <button class="clickButton" id="but1" onClick ={() =>{
           caller()
           }} >Move steps</button><input id="text1" type="text" placeholder="10" defaultValue = "10"  style={{width:"20px", color:"black"}}></input>
       </div>
@@ -85,29 +85,29 @@ export default function Sidebar(props) {
             onDragOver={dragOver} className="flex flex-row flex-wrap bg-blue-500 text-white px-2 py-1 my-2 text-sm cursor-pointer">
         {"Turn "}
         <Icon name="undo" size={15} className="text-white mx-2" />
-        <button onClick ={ () => {rotation("anticlock")}} > degrees</button><input id="text2" type="text" placeholder="15" defaultValue = "15" style={{width:"20px", color:"black"}}></input>
+        <button class="clickButton" id="but2" onClick ={ () => {rotation("anticlock")}} > degrees</button><input id="text2" type="text" placeholder="15" defaultValue = "15" style={{width:"20px", color:"black"}}></input>
       </div>
       <div id="4" draggable="true" onDragStart={dragStart}
             onDragOver={dragOver} className="flex flex-row flex-wrap bg-blue-500 text-white px-2 py-1 my-2 text-sm cursor-pointer">
         {"Turn "}
         <Icon name="redo" size={15} className="text-white mx-2" />
-        <button onClick ={() =>{rotation("clock")}} >degrees</button><input id="text3" type="text" placeholder="15" defaultValue = "15"style={{maxWidth:"50px", color:"black"}}></input> 
+        <button class="clickButton" id="but3" onClick ={() =>{rotation("clock")}} >degrees</button><input id="text3" type="text" placeholder="15" defaultValue = "15"style={{maxWidth:"50px", color:"black"}}></input> 
       </div>
       <div className="font-bold"> {"Looks"} </div>
       <div id="5" draggable="true" onDragStart={dragStart}
             onDragOver={dragOver} className="flex flex-row flex-wrap bg-purple-500 text-white px-2 py-1 my-2 text-sm cursor-pointer">
         
-        <button onClick ={() =>{checkClick()}} >Say <input id="text4" type="text" placeholder="Hello!" defaultValue="Hello!" style={{maxWidth:"50px", color:"black"}} onClick="none"></input></button>
+        <button class="clickButton" id="but4" onClick ={() =>{checkClick()}} >Say <input id="text4" type="text" placeholder="Hello!" defaultValue="Hello!" style={{maxWidth:"50px", color:"black"}} onClick="none"></input></button>
       </div>
       <div id="6" draggable="true" onDragStart={dragStart}
             onDragOver={dragOver} className="flex flex-row flex-wrap bg-purple-500 text-white px-2 py-1 my-2 text-sm cursor-pointer">
         
-        <button onClick ={() =>{show(true)}} >Show </button>
+        <button class="clickButton" id="but5" onClick ={() =>{show(true)}} >Show </button>
       </div>
       <div id="7" draggable="true" onDragStart={dragStart}
             onDragOver={dragOver} className="flex flex-row flex-wrap bg-purple-500 text-white px-2 py-1 my-2 text-sm cursor-pointer">
         
-        <button onClick ={() =>{show(false)}} >Hide</button>
+        <button class="clickButton" id="but6" onClick ={() =>{show(false)}} >Hide</button>
       </div>
       
       <div className="font-bold"> {"Controls"} </div>
